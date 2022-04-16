@@ -41,8 +41,12 @@ function submit(){
     err.style.color = "red";
   }
   change_code();
-  
 }
 reload.addEventListener('click',change_code);
 var sub = document.querySelector(".btn");
 sub.addEventListener('click',submit);
+document.addEventListener('keypress', function(e){
+  if(e.code == "Enter"){
+    submit();
+  }
+})
