@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://kit.fontawesome.com/9566e6c555.js" crossorigin="anonymous"></script>
+  <script src="script.js" defer></script>
+  
+  <link rel="stylesheet" href="CSS/style.css">
+  <script async src="https://www.google.com/recaptcha/api.js"></script>
+<script>
+  // If reCAPTCHA is still loading, grecaptcha will be undefined.
+  
+</script>
+  <title>Re-Captcha</title>
+</head>
+<body>
+  <div id="container">
+    <center><h1>Re-Captcha</h1></center>
+    <div class="left">
+
+    </div>
+    <div class="right">
+      <h1 class="error"></h1>
+      <input class = "user"type = "text" name = "user"placeholder="Enter Username" value = "mohitchoyal" required readonly>
+      <input class = "pass"type = "password" name = "password" placeholder="Enter Password"value="1234"readonly required>
+      <input  class = "chnge-btn real" type= "text" name = "real_code" value="" readonly> 
+      <button class="bttn" onclick="change_code" ><i class="fa-solid fa-arrow-rotate-right"></i></button> 
+       <input type = "text"name = "user_code" class="user_code" placeholder="Enter Captcha Code" required>
+      <!-- <div class="g-recaptcha" data-sitekey="6Lem6m4fAAAAAFrMFBrbIR32toghGr2hQYncOdBs"></div> -->
+      <br/>
+      <button onclick="submit" class="btn">Submit</button>
+    </div>
+  </div>
+
+  
+</body>
+</html>

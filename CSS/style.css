@@ -1,0 +1,80 @@
+body{
+  background-color: rgb(4, 148, 140);
+  text-align: center;
+  align-items: center;
+}
+#container{
+  width: 840px;
+  margin: 200px auto;
+  margin-top: 50px;
+}
+.left{
+  background-image: url("https://www.teachwire.net/uploads/news/iStock-597640304.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  float: left;
+  height: 350px;
+  width: 350px;
+  border-radius: 5px 0 0 5px;
+  padding-top:20px;
+  padding-right: 20px;
+}
+h1{
+  color: #fff;
+  font-size: 3rem;
+}
+[type=text],[type=email],[type=number],[type=password] {
+  display: block;
+  margin: 0 auto;
+  width: 80%;
+  border: 0;
+  border-bottom: 1px solid rgba(0,0,0,.2);
+  height: 45px;
+  line-height: 45px;  
+  margin-bottom: 10px;
+  font-size: 1em;
+  color: black;
+}
+.chnge-btn{
+  display: inline-block;
+}
+.bttn{
+  background-color: #fff;
+  color: black;
+  border-radius: 5px;
+  border-color: #fff;
+}
+.error{
+  color: red;
+  font-size: 1.5rem;
+}
+.btn{
+  background-color: rgb(4, 148, 140);
+  color: black;
+  padding: 7px 15px;
+  border-radius: 10px;
+  border-color: #fff;
+  width: 100px;
+  box-shadow: 5px 3px 3px rgba(0,0,0,.2);
+}
+.btn:active{
+  transform: translate(0,0.3rem);
+  box-shadow: 0 0.1rem rgba(255, 255, 255, 0.65) ;
+}
+.bttn:active{
+  transform: translate(0,0.3rem);
+  box-shadow: 0 0.1rem rgba(121, 121, 121, 0.65) ;
+}
+button:hover{
+  filter: brightness(110%);
+}
+.right{
+  float: left;
+  height: 329px;
+  width: 350px;
+  padding: 20px 20px;
+  background-color: white;
+  text-align: center;
+  border-radius: 0 5px 5px 0;
+}
