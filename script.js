@@ -14,7 +14,7 @@ function change_code(){
 // function onloadCallback(){
 //   grecaptcha.ready(function(){
 //     grecaptcha.render("container", {
-//       sitekey: "6Lem6m4fAAAAAFrMFBrbIR32toghGr2hQYncOdBs"
+//       sitekey: ""
 //     });
 //   });
   
@@ -33,12 +33,15 @@ function submit(){
   const err = document.querySelector(".error");
   if(real==user){
     err.innerHTML = "Code Matched";
+    err.style.color = "green";
+    // window.location.href = "youdidit.html";
   }
   else{
     err.innerHTML = "Code Does Not Matched !";
+    err.style.color = "red";
   }
   change_code();
-  window.location.href = "youdidit.html";
+  
 }
 reload.addEventListener('click',change_code);
 var sub = document.querySelector(".btn");
