@@ -49,4 +49,4 @@ document.addEventListener('keypress', function(e){
   if(e.code == "Enter"){
     submit();
   }
-})
+});
