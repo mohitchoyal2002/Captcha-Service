@@ -14,7 +14,7 @@ body{
   background-position: center;
   background-size: cover;
   float: left;
-  height: 450px;
+  height: 455px;
   width: 350px;
   border-radius: 5px 0 0 5px;
   padding-top:20px;
@@ -71,7 +71,7 @@ button:hover{
 }
 .right{
   float: left;
-  height: 429px;
+  height: 459px;
   width: 350px;
   padding: 20px 20px;
   background-color: white;
