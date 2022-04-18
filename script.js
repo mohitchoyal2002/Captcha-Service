@@ -11,14 +11,15 @@ function change_code(){
   // alert(code);
   document.querySelector(".chnge-btn").setAttribute('value', code);
 }
-function onloadCallback(){
-  grecaptcha.ready(function(){
-    grecaptcha.render("container", {
-      sitekey: "6Lem6m4fAAAAAFrMFBrbIR32toghGr2hQYncOdBs"
-    });
-  });
-  
-}
+// function onloadCallback(){
+//   grecaptcha.ready(function(){
+//     grecaptcha.render("container", {
+//       sitekey: "6Lem6m4fAAAAAFrMFBrbIR32toghGr2hQYncOdBs"
+//     });
+//   });
+//   var response = grecaptcha.getResponse();
+//   // return response;
+// }
 
 change_code();
 
@@ -26,21 +27,36 @@ const reload = document.querySelector(".bttn");
 
 
 function submit(){
-  // var res = grecaptcha.getResponse();
-  // console.log(res);
+  var response = grecaptcha.getResponse().length;
+  console.log(response);
   var real = document.querySelector(".real").value;
   var user = document.querySelector(".user_code").value;
   const err = document.querySelector(".error");
-  if(real==user){
+
+  
+  if(real == user && response == 0 ){
+    err.innerHTML == "Captcha is not verified";
+    err.style.color = "red";
+  }
+  else if(real != user && response != 0){
+    err.innerHTML = "Code Does Not Matched !";
+    err.style.color = "red";
+    change_code();
+  }
+  else if(real==user && response != 0){
     err.innerHTML = "Code Matched";
     err.style.color = "green";
     // window.location.href = "youdidit.html";
   }
-  else{
-    err.innerHTML = "Code Does Not Matched !";
+  else if(real == user && response == 0 ){
+    err.innerHTML == "Captcha is not verified";
     err.style.color = "red";
   }
-  change_code();
+  else{
+    err.innerHTML = "Enter Valid Captcha code and veriy captcha";
+    err.style.color = "red";
+    change_code();
+  }
 }
 reload.addEventListener('click',change_code);
 var sub = document.querySelector(".btn");
