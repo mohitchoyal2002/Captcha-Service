@@ -33,7 +33,7 @@ function submit(){
   var user = document.querySelector(".user_code").value;
   const err = document.querySelector(".error");
 
-  
+
   if(real == user && response == 0 ){
     err.innerHTML == "Captcha is not verified";
     err.style.color = "red";
@@ -46,7 +46,7 @@ function submit(){
   else if(real==user && response != 0){
     err.innerHTML = "Code Matched";
     err.style.color = "green";
-    // window.location.href = "youdidit.html";
+    window.location.href = "youdidit.html";
   }
   else if(real == user && response == 0 ){
     err.innerHTML == "Captcha is not verified";
