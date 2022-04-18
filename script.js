@@ -11,14 +11,14 @@ function change_code(){
   // alert(code);
   document.querySelector(".chnge-btn").setAttribute('value', code);
 }
-// function onloadCallback(){
-//   grecaptcha.ready(function(){
-//     grecaptcha.render("container", {
-//       sitekey: ""
-//     });
-//   });
+function onloadCallback(){
+  grecaptcha.ready(function(){
+    grecaptcha.render("container", {
+      sitekey: "6Lem6m4fAAAAAFrMFBrbIR32toghGr2hQYncOdBs"
+    });
+  });
   
-// }
+}
 
 change_code();
 
